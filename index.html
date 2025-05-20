@@ -413,9 +413,13 @@
         </div>
       </div>
 
-      <!-- Contact Form -->
+      <!-- Contact Form using FormSubmit -->
       <div class="col-lg-7">
-        <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+        <form action="https://formsubmit.co/khanareb5922@gmail.com" method="POST" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+          <!-- Prevent FormSubmit from showing captcha -->
+          <input type="hidden" name="_captcha" value="false">
+          <!-- Redirect to thank you page (optional) -->
+          <input type="hidden" name="_next" value="https://areebkhan2025.github.io/thankyou.html">
           <div class="row gy-4">
             <div class="col-md-6">
               <label for="name-field" class="pb-2">Your Name</label>
@@ -434,9 +438,6 @@
               <textarea name="message" id="message-field" rows="10" class="form-control" required></textarea>
             </div>
             <div class="col-md-12 text-center">
-              <div class="loading">Loading</div>
-              <div class="error-message"></div>
-              <div class="sent-message">Your message has been sent. Thank you!</div>
               <button type="submit">Send Message</button>
             </div>
           </div>
